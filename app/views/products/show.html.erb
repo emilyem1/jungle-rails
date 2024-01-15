@@ -12,11 +12,18 @@
         <span><%= @product.quantity %> in stock at </span>
         <span>$<%= @product.price %></span>
       </div>
-      <div class="price">          
-        <%= button_to add_item_cart_path(product_id: @product.id), class: 'btn' , method: :post do %>
-          <%= fa_icon "shopping-cart", text: 'Add' %>
-        <% end %>          
+      <div class="price">
+        <% if @product.quantity > 0 %>        
+          <%= button_to add_item_cart_path(product_id: @product.id), class: 'btn' , method: :post do %>
+            <%= fa_icon "shopping-cart", text: 'Add' %>
+          <% end %>
       </div>
+      <% else %>
+      <div class="if-soldout">
+        <button class="soldout" >Sold Out</button>
+        <button class='btn' style='opacity: 0.5;'> <%= fa_icon "shopping-cart", text: 'Add' %>  </button>
+      </div>
+      <% end %>  
     </div>
   </article>
 
