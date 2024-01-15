@@ -50,6 +50,9 @@
     </div>
   </div>
   <% else %>
-  <p>Your cart is empty! <%= link_to 'Go back to the jungle.', root_path %><p>
+  <div class="alert alert-danger">
+    <p style="text-align: center;">Your cart is empty! Go back to the jungle. <%= link_to '🌴', root_path %></p>
+  </div>
+  
   <% end %>
 </section>
