@@ -1,2 +1,10 @@
-<h1>Admin::Dashboard#show</h1>
-<p>Find me in app/views/admin/dashboard/show.html.erb</p>
+<h1 style="margin-top: 1em;">Admin Dashboard</h1>
+<br>
+<main>
+  <ul>
+    <li>How many <b>products</b> are in the database: <b><%= @products_count %></li></b>
+    <li>How many <b>categories</b> are in the database: <b><%= @categories_count %></li></b>
+  </ul>
+  <p>Go to the admin products page: <%= link_to '🪴', admin_products_url, style: 'text-decoration: none;' %> </p>
+</main>
+
