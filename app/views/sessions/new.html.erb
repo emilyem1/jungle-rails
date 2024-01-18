@@ -1,7 +1,7 @@
-<main>
+<main style="display: flex; flex-direction: column; justify-content: center; align-items: center;">
   <br>
   <h1>Login</h1>
-  <%= form_tag '/login', class: 'form' do %>
+  <%= form_tag '/login', class: 'form', style: 'display: flex; flex-direction: column; padding: 1em; width: 30vw;' do %>
     Email: <%= text_field_tag :email %>
     Password: <%= password_field_tag :password %>
     <br>
